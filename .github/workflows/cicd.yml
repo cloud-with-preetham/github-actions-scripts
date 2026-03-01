@@ -1,0 +1,20 @@
+
+name: CICD
+
+# Manual click (deliver) workflow whenever user needs
+on:
+  workflow_dispatch:
+
+jobs:
+
+  code:
+    steps:
+      - name: checkout code
+        run: echo "Code Clone from GitHub"
+  build:
+    steps:
+      - name: Build Docker Container
+        run: echo "Docker Container built"
+  test:
+    steps:
+      - name: 
