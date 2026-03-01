@@ -3,26 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <title>Elite Developer Portfolio</title>
+    <title>Preetham Pereira | DevOps Engineer</title>
 
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Fira+Code&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Fira+Code&display=swap"
       rel="stylesheet"
     />
 
     <style>
-      /* ================= ROOT ================= */
       :root {
         --bg: #0b0f19;
-        --text: white;
-        --card: rgba(255, 255, 255, 0.05);
+        --card: #111827;
         --accent: #00ffd5;
-      }
-
-      .light {
-        --bg: #f4f6f8;
-        --text: #111;
-        --card: white;
+        --text: white;
       }
 
       body {
@@ -30,41 +23,23 @@
         font-family: Poppins;
         background: var(--bg);
         color: var(--text);
-        overflow-x: hidden;
       }
 
-      /* ================= PARTICLES BG ================= */
-      #particles {
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-      }
-
-      /* ================= NAVBAR ================= */
+      /* NAV */
       nav {
         position: fixed;
         width: 100%;
         padding: 18px 8%;
         display: flex;
         justify-content: space-between;
-        backdrop-filter: blur(12px);
-        background: rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(10px);
+        background: rgba(0, 0, 0, 0.4);
         z-index: 999;
       }
 
-      nav button {
-        background: none;
-        border: 1px solid var(--accent);
-        color: var(--accent);
-        padding: 6px 12px;
-        border-radius: 20px;
-        cursor: pointer;
-      }
-
-      /* ================= HERO ================= */
+      /* HERO */
       .hero {
-        height: 100vh;
+        height: 90vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -76,98 +51,113 @@
         font-size: 3rem;
       }
 
-      .typing {
+      .accent {
         color: var(--accent);
-        font-weight: 600;
       }
 
-      /* ================= BUTTON ================= */
       .btn {
-        margin-top: 20px;
-        padding: 12px 28px;
-        border-radius: 30px;
+        padding: 12px 26px;
         border: none;
+        border-radius: 30px;
         background: linear-gradient(45deg, #00ffd5, #007cf0);
         cursor: pointer;
+        margin-top: 20px;
         font-weight: 600;
       }
 
-      /* ================= SECTIONS ================= */
+      /* SECTION */
       section {
-        padding: 90px 8%;
+        padding: 80px 8%;
       }
 
       .title {
         color: var(--accent);
-        font-size: 2.2rem;
-        margin-bottom: 40px;
+        font-size: 2rem;
+        margin-bottom: 30px;
       }
 
-      /* ================= PROJECTS ================= */
-      .projects {
+      /* DASHBOARD CARDS */
+      .dashboard {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 25px;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
       }
 
-      .project {
+      .card {
         background: var(--card);
         padding: 25px;
-        border-radius: 20px;
-        transition: 0.4s;
-        position: relative;
-        overflow: hidden;
+        border-radius: 15px;
       }
 
-      .project:hover {
-        transform: translateY(-10px) scale(1.02);
-      }
-
-      .project::after {
-        content: "View Project →";
-        position: absolute;
-        bottom: -40px;
-        left: 20px;
-        transition: 0.3s;
+      .metric {
+        font-size: 2rem;
         color: var(--accent);
       }
 
-      .project:hover::after {
-        bottom: 15px;
-      }
-
-      /* ================= TERMINAL ================= */
+      /* TERMINAL */
       .terminal {
-        background: #000;
-        padding: 25px;
-        border-radius: 15px;
+        background: black;
+        padding: 20px;
+        border-radius: 12px;
         font-family: "Fira Code";
         color: #00ff88;
-        height: 250px;
+        height: 230px;
         overflow: auto;
       }
 
-      /* ================= GITHUB ================= */
+      /* CLUSTER */
+      .cluster {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 15px;
+      }
+
+      .node {
+        background: var(--card);
+        padding: 18px;
+        border-radius: 12px;
+        text-align: center;
+      }
+
+      .status {
+        margin-top: 8px;
+        font-size: 0.9rem;
+      }
+
+      .green {
+        color: #00ff88;
+      }
+
+      .yellow {
+        color: #ffd000;
+      }
+
+      /* REPOS */
       .repo {
         background: var(--card);
         padding: 18px;
-        border-radius: 15px;
-        margin-bottom: 15px;
+        border-radius: 12px;
+        margin-bottom: 12px;
       }
 
-      /* ================= CURSOR GLOW ================= */
-      .cursor {
-        position: fixed;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        background: var(--accent);
-        pointer-events: none;
-        filter: blur(10px);
-        transform: translate(-50%, -50%);
+      /* HEATMAP */
+      .heatmap {
+        display: grid;
+        grid-template-columns: repeat(20, 12px);
+        gap: 5px;
       }
 
-      /* ================= FOOTER ================= */
+      .box {
+        width: 12px;
+        height: 12px;
+        background: #1f2937;
+        border-radius: 2px;
+      }
+
+      .active {
+        background: #00ffd5;
+      }
+
       footer {
         text-align: center;
         padding: 40px;
@@ -177,166 +167,191 @@
   </head>
 
   <body>
-    <canvas id="particles"></canvas>
-    <div class="cursor"></div>
-
-    <!-- NAV -->
     <nav>
-      <h3>DevElite</h3>
-      <button onclick="toggleTheme()">Toggle Theme</button>
+      <h3>Preetham.dev</h3>
+      <div>
+        <a
+          href="https://github.com/cloud-with-preetham"
+          target="_blank"
+          style="color: #00ffd5"
+          >GitHub</a
+        >
+      </div>
     </nav>
 
     <!-- HERO -->
     <section class="hero">
-      <h1>Hi, I'm <span style="color: #00ffd5">Preetham Pereira</span></h1>
-      <h2 class="typing"></h2>
+      <h1>Hi, I'm <span class="accent">Preetham Pereira</span></h1>
+      <h2 id="typing"></h2>
 
-      <button class="btn" onclick="downloadResume()">⬇ Download Resume</button>
+      <p>
+        Automating infrastructure • Scaling cloud systems • Enabling developer
+        velocity
+      </p>
+
+      <button class="btn" onclick="window.open('resume.pdf')">
+        ⬇ Download Resume
+      </button>
     </section>
 
-    <!-- DEVOPS TERMINAL -->
+    <!-- DEVOPS DASHBOARD -->
     <section>
-      <h2 class="title">DevOps Terminal</h2>
-      <div class="terminal" id="terminal"></div>
-    </section>
+      <h2 class="title">DevOps Dashboard</h2>
 
-    <!-- PROJECTS -->
-    <section>
-      <h2 class="title">Projects</h2>
-      <div class="projects">
-        <div class="project">CI/CD Automation Platform</div>
-        <div class="project">Kubernetes Deployment System</div>
-        <div class="project">AI SaaS Dashboard</div>
+      <div class="dashboard">
+        <div class="card">
+          <p>Deployment Success Rate</p>
+          <div class="metric">99.8%</div>
+        </div>
+
+        <div class="card">
+          <p>CI/CD Pipelines</p>
+          <div class="metric">42 Active</div>
+        </div>
+
+        <div class="card">
+          <p>Containers Running</p>
+          <div class="metric" id="containers">128</div>
+        </div>
+
+        <div class="card">
+          <p>System Uptime</p>
+          <div class="metric">99.99%</div>
+        </div>
       </div>
     </section>
 
-    <!-- GITHUB AUTO FETCH -->
+    <!-- TERMINAL -->
+    <section>
+      <h2 class="title">Live Deployment Logs</h2>
+      <div class="terminal" id="terminal"></div>
+    </section>
+
+    <!-- KUBERNETES CLUSTER -->
+    <section>
+      <h2 class="title">Kubernetes Cluster</h2>
+
+      <div class="cluster">
+        <div class="node">
+          Node-1
+          <div class="status green">Healthy</div>
+        </div>
+        <div class="node">
+          Node-2
+          <div class="status green">Healthy</div>
+        </div>
+        <div class="node">
+          Node-3
+          <div class="status yellow">Scaling</div>
+        </div>
+        <div class="node">
+          Node-4
+          <div class="status green">Healthy</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GITHUB PROJECTS -->
     <section>
       <h2 class="title">GitHub Projects</h2>
       <div id="repos"></div>
     </section>
 
-    <footer>© 2026 All Rights Reserved — Preetham Pereira</footer>
+    <!-- CONTRIBUTION HEATMAP -->
+    <section>
+      <h2 class="title">Contribution Activity</h2>
+      <div class="heatmap" id="heatmap"></div>
+    </section>
+
+    <footer>
+      © 2026 Preetham Pereira — DevOps Engineer 🚀<br />
+      reachout.preetham@gmail.com
+    </footer>
 
     <script>
-      /* ================= THEME ================= */
-      function toggleTheme() {
-        document.body.classList.toggle("light");
-      }
-
-      /* ================= CURSOR GLOW ================= */
-      const cursor = document.querySelector(".cursor");
-      document.addEventListener("mousemove", (e) => {
-        cursor.style.left = e.clientX + "px";
-        cursor.style.top = e.clientY + "px";
-      });
-
-      /* ================= TYPING EFFECT ================= */
+      /* ================= TYPING ================= */
       const roles = [
-        "Full Stack Developer",
-        "UI/UX Enthusiast",
         "DevOps Engineer",
-        "Cloud Builder",
+        "Cloud Automation Specialist",
+        "CI/CD Pipeline Builder",
+        "Kubernetes Practitioner",
       ];
 
       let i = 0,
         j = 0,
-        current = "",
-        isDeleting = false;
-      const typing = document.querySelector(".typing");
+        del = false;
+      const el = document.getElementById("typing");
 
       function type() {
-        current = roles[i];
-
-        if (!isDeleting) {
-          typing.textContent = current.substring(0, j++);
-          if (j > current.length) {
-            isDeleting = true;
+        let word = roles[i];
+        el.textContent = word.substring(0, j);
+        if (!del) {
+          j++;
+          if (j > word.length) {
+            del = true;
             setTimeout(type, 1200);
             return;
           }
         } else {
-          typing.textContent = current.substring(0, j--);
+          j--;
           if (j === 0) {
-            isDeleting = false;
+            del = false;
             i = (i + 1) % roles.length;
           }
         }
-        setTimeout(type, isDeleting ? 40 : 80);
+        setTimeout(type, del ? 40 : 80);
       }
       type();
 
-      /* ================= TERMINAL ANIMATION ================= */
-      const terminalLines = [
-        "> initializing devops pipeline...",
-        "> docker build success ✔",
-        "> kubernetes deployment running...",
-        "> github actions triggered...",
+      /* ================= TERMINAL ================= */
+      const logs = [
+        "> cloning repository...",
+        "> docker build successful",
+        "> pushing image to registry",
+        "> kubectl apply -f deployment.yaml",
+        "> rollout completed ✔",
         "> production deployed 🚀",
       ];
 
-      let t = 0;
-      function terminalTyping() {
-        if (t < terminalLines.length) {
-          document.getElementById("terminal").innerHTML +=
-            terminalLines[t] + "<br>";
-          t++;
-          setTimeout(terminalTyping, 900);
+      let l = 0;
+      function terminal() {
+        if (l < logs.length) {
+          document.getElementById("terminal").innerHTML += logs[l] + "<br>";
+          l++;
+          setTimeout(terminal, 900);
         }
       }
-      terminalTyping();
-
-      /* ================= RESUME DOWNLOAD ================= */
-      function downloadResume() {
-        window.open("resume.pdf", "_blank");
-      }
+      terminal();
 
       /* ================= GITHUB FETCH ================= */
-      /* Replace username below */
-      fetch("https://api.github.com/users/YOUR_GITHUB_USERNAME/repos")
-        .then((res) => res.json())
+      fetch("https://api.github.com/users/cloud-with-preetham/repos")
+        .then((r) => r.json())
         .then((data) => {
-          const container = document.getElementById("repos");
+          const c = document.getElementById("repos");
           data.slice(0, 6).forEach((repo) => {
-            container.innerHTML += `
-      <div class="repo">
-        <h3>${repo.name}</h3>
-        <p>${repo.description || "No description"}</p>
-        <a href="${repo.html_url}" target="_blank">View Repo</a>
-      </div>`;
+            c.innerHTML += `
+   <div class="repo">
+   <strong>${repo.name}</strong>
+   <p>${repo.description || "DevOps Project"}</p>
+   <a href="${repo.html_url}" target="_blank">View Repo</a>
+   </div>`;
           });
         });
 
-      /* ================= PARTICLES BACKGROUND ================= */
-      const canvas = document.getElementById("particles");
-      const ctx = canvas.getContext("2d");
-
-      canvas.width = innerWidth;
-      canvas.height = innerHeight;
-
-      let particles = [];
-      for (let i = 0; i < 80; i++) {
-        particles.push({
-          x: Math.random() * canvas.width,
-          y: Math.random() * canvas.height,
-          vx: Math.random() * 1 - 0.5,
-          vy: Math.random() * 1 - 0.5,
-        });
+      /* ================= HEATMAP ================= */
+      const heatmap = document.getElementById("heatmap");
+      for (let i = 0; i < 260; i++) {
+        const box = document.createElement("div");
+        box.className = "box";
+        if (Math.random() > 0.6) box.classList.add("active");
+        heatmap.appendChild(box);
       }
 
-      function animate() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        particles.forEach((p) => {
-          p.x += p.vx;
-          p.y += p.vy;
-          ctx.beginPath();
-          ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
-          ctx.fillStyle = "#00ffd5";
-          ctx.fill();
-        });
-        requestAnimationFrame(animate);
-      }
-      animate();
+      /* ================= LIVE METRIC ================= */
+      setInterval(() => {
+        document.getElementById("containers").textContent =
+          120 + Math.floor(Math.random() * 15);
+      }, 3000);
     </script>
   </body>
 </html>
