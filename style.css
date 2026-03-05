@@ -1,0 +1,84 @@
+body{
+margin:0;
+font-family:Inter;
+background:#0f172a;
+color:white;
+text-align:center;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+padding:20px 10%;
+position:fixed;
+width:100%;
+background:#020617;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:20px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+}
+
+.hero{
+padding-top:120px;
+}
+
+.profile{
+width:150px;
+border-radius:50%;
+border:3px solid cyan;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:20px;
+padding:40px;
+}
+
+.card{
+background:#020617;
+padding:30px;
+border-radius:10px;
+border:1px solid #1e293b;
+}
+
+.pipeline{
+display:flex;
+justify-content:center;
+gap:20px;
+padding:40px;
+}
+
+.pipeline div{
+background:cyan;
+color:black;
+padding:15px 20px;
+border-radius:5px;
+}
+
+.terminal{
+background:black;
+color:#00ff88;
+font-family:monospace;
+width:60%;
+margin:auto;
+padding:20px;
+text-align:left;
+}
+
+.project{
+background:#020617;
+padding:25px;
+border-radius:10px;
+}
