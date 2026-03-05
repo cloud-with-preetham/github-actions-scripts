@@ -1,188 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Preetham Pereira | DevOps Engineer</title>
-
+<title>My Portfolio</title>
 <link rel="stylesheet" href="style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-
-<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-
 </head>
 
 <body>
 
-<div id="particles-js"></div>
+<header>
+    <h1 class="logo">MY<span>PORTFOLIO</span></h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
 
-<nav>
-
-<div class="logo">Preetham</div>
-
-<ul>
-<li><a href="#about">About</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#github">GitHub</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-
-</nav>
-
-
-<section class="hero">
-
-<div class="hero-left">
-
-<h1>Preetham<br>Pereira</h1>
-
-<h2 id="typing"></h2>
-
-<p>
-Aspiring DevOps Engineer building CI/CD pipelines,
-cloud infrastructure and automation systems.
-</p>
-
-<div class="buttons">
-<a href="#projects">Portfolio</a>
-<a href="#contact">Contact</a>
-</div>
-
-</div>
-
-<div class="hero-right">
-
-<img src="profile.jpg">
-
-</div>
-
+<section class="banner">
+    <div class="banner-content">
+        <h2>Hello, I'm Your Name</h2>
+        <p>Web Developer | Designer | Creator</p>
+        <button onclick="scrollToProjects()">View Projects</button>
+    </div>
 </section>
-
-
-<section id="about">
-
-<h2>About Me</h2>
-
-<p>
-I'm a DevOps enthusiast currently working with AWS, Docker, CI/CD and automation tools.
-I enjoy building real-world infrastructure projects and sharing my DevOps journey online.
-</p>
-
-</section>
-
-
-<section id="skills">
-
-<h2>DevOps Stack</h2>
-
-<div class="skills-grid">
-
-<div>AWS</div>
-<div>Docker</div>
-<div>Kubernetes</div>
-<div>Terraform</div>
-<div>GitHub Actions</div>
-<div>Linux</div>
-<div>Networking</div>
-<div>Python</div>
-
-</div>
-
-</section>
-
-
-<section id="pipeline">
-
-<h2>CI/CD Pipeline</h2>
-
-<div class="pipeline">
-
-<div>Code</div>
-<div>Build</div>
-<div>Test</div>
-<div>Docker</div>
-<div>Deploy</div>
-
-</div>
-
-</section>
-
-
-<section id="terminal">
-
-<h2>DevOps Terminal</h2>
-
-<div class="terminal">
-
-<p>$ whoami</p>
-<p>preetham</p>
-
-<p>$ role</p>
-<p>devops engineer</p>
-
-<p>$ stack</p>
-<p>AWS Docker Kubernetes Terraform CI/CD</p>
-
-</div>
-
-</section>
-
 
 <section id="projects">
+<h2 class="section-title">Projects</h2>
 
-<h2>Projects</h2>
-
-<div class="projects">
-
-<div class="card">
-<h3>CI/CD Pipeline</h3>
-<p>Automated deployment using GitHub Actions.</p>
-</div>
+<div class="row">
 
 <div class="card">
-<h3>Dockerized Application</h3>
-<p>Containerized and deployed to cloud.</p>
+<img src="https://picsum.photos/300/200?1">
+<h3>Project One</h3>
+<p>Short project description</p>
 </div>
 
 <div class="card">
-<h3>Terraform Infrastructure</h3>
-<p>Provisioned infrastructure as code.</p>
+<img src="https://picsum.photos/300/200?2">
+<h3>Project Two</h3>
+<p>Short project description</p>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/300/200?3">
+<h3>Project Three</h3>
+<p>Short project description</p>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/300/200?4">
+<h3>Project Four</h3>
+<p>Short project description</p>
 </div>
 
 </div>
-
 </section>
 
+<section id="skills">
+<h2 class="section-title">Skills</h2>
 
-<section id="github">
+<div class="row">
 
-<h2>GitHub Repositories</h2>
+<div class="card skill">HTML</div>
+<div class="card skill">CSS</div>
+<div class="card skill">JavaScript</div>
+<div class="card skill">React</div>
+<div class="card skill">Node.js</div>
 
-<div id="repos"></div>
-
+</div>
 </section>
-
 
 <section id="contact">
+<h2 class="section-title">Contact</h2>
 
-<h2>Contact</h2>
-
-<p>Email: reachout.preetham@gmail.com</p>
-
-<p>
-LinkedIn:  
-<a href="https://linkedin.com/in/preetham-pereira">
-linkedin.com/in/preetham-pereira
-</a>
-</p>
+<div class="contact-box">
+<p>Email: your@email.com</p>
+<p>GitHub: github.com/yourname</p>
+<p>LinkedIn: linkedin.com/in/yourname</p>
+</div>
 
 </section>
-
 
 <script src="script.js"></script>
 
