@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Preetham Pereira | DevOps Engineer</title>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 
@@ -13,269 +16,297 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:system-ui;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#0f172a;
+background:#0a0f1c;
 color:white;
-line-height:1.6;
-}
-
-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 10%;
-background:#020617;
-position:sticky;
-top:0;
-z-index:100;
-}
-
-.logo{
-font-size:24px;
-font-weight:700;
-color:#38bdf8;
-}
-
-nav a{
-margin-left:25px;
-text-decoration:none;
-color:white;
-font-weight:500;
-}
-
-.hero{
-height:90vh;
-display:flex;
-align-items:center;
-justify-content:center;
-flex-direction:column;
-text-align:center;
-}
-
-.hero h1{
-font-size:50px;
-}
-
-.hero span{
-color:#38bdf8;
-}
-
-.hero p{
-margin-top:10px;
-font-size:18px;
-color:#94a3b8;
-}
-
-.btn{
-margin-top:25px;
-padding:12px 28px;
-background:#38bdf8;
-color:black;
-border-radius:8px;
-text-decoration:none;
-font-weight:600;
 }
 
 section{
-padding:80px 10%;
+min-height:100vh;
+display:flex;
+align-items:center;
+padding:80px;
 }
 
-.section-title{
-font-size:32px;
-margin-bottom:40px;
-color:#38bdf8;
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+padding:20px 80px;
+background:#0a0f1c;
+z-index:100;
 }
 
-.grid{
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+font-weight:500;
+}
+
+nav a:hover{
+color:#00d4ff;
+}
+
+/* HERO */
+
+.hero{
+background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8)),
+url("https://images.unsplash.com/photo-1518779578993-ec3579fee39f");
+background-size:cover;
+background-position:center;
+}
+
+.hero-content{
+max-width:600px;
+}
+
+.hero h1{
+font-size:55px;
+}
+
+.hero span{
+color:#00d4ff;
+}
+
+.hero p{
+margin-top:15px;
+color:#ccc;
+}
+
+.btn{
+margin-top:30px;
+display:inline-block;
+padding:12px 30px;
+border:1px solid white;
+border-radius:30px;
+text-decoration:none;
+color:white;
+margin-right:15px;
+}
+
+.btn:hover{
+background:#00d4ff;
+border:none;
+}
+
+/* ABOUT */
+
+.about{
+display:flex;
+gap:60px;
+}
+
+.about img{
+width:300px;
+border-radius:10px;
+}
+
+.about-text h2{
+font-size:35px;
+margin-bottom:20px;
+}
+
+.about-text p{
+color:#aaa;
+line-height:1.8;
+}
+
+/* RESUME */
+
+.resume{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+}
+
+.skill{
+margin-bottom:20px;
+}
+
+.skill-bar{
+height:6px;
+background:#1a1f33;
+border-radius:10px;
+margin-top:6px;
+}
+
+.skill-fill{
+height:100%;
+background:#00d4ff;
+border-radius:10px;
+}
+
+/* PROJECTS */
+
+.projects{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:25px;
 }
 
-.card{
-background:#020617;
+.project{
+background:#11162a;
 padding:25px;
-border-radius:12px;
-border:1px solid #1e293b;
+border-radius:10px;
+}
+
+.project:hover{
+transform:translateY(-5px);
 transition:.3s;
 }
 
-.card:hover{
-transform:translateY(-5px);
-}
+/* CONTACT */
 
-.skills i{
-font-size:30px;
-margin-bottom:10px;
-color:#38bdf8;
-}
-
-.terminal{
-background:black;
-padding:20px;
-border-radius:10px;
-font-family:monospace;
-color:#00ff88;
-}
-
-footer{
+.contact{
 text-align:center;
-padding:30px;
-background:#020617;
-margin-top:50px;
-color:#94a3b8;
 }
 
-.social a{
-margin:10px;
-color:#38bdf8;
-font-size:22px;
+.contact a{
+color:#00d4ff;
+text-decoration:none;
 }
 
 </style>
+
 </head>
 
 <body>
 
-<header>
-
-<div class="logo">Preetham</div>
 
 <nav>
+
+<div><b>Preetham</b></div>
+
+<div>
+<a href="#home">Home</a>
 <a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
+<a href="#resume">Resume</a>
+<a href="#portfolio">Portfolio</a>
+</div>
+
 </nav>
 
-</header>
 
+<section class="hero" id="home">
 
-<section class="hero">
+<div class="hero-content">
 
-<h1>Hi, I'm <span>Preetham Pereira</span></h1>
+<h1>PREETHAM <span>PEREIRA</span></h1>
 
 <p>Aspiring DevOps Engineer | AWS | Kubernetes | CI/CD</p>
 
-<a class="btn" href="#projects">View My Work</a>
+<a class="btn" href="#resume">Resume</a>
+<a class="btn" href="#portfolio">Portfolio</a>
+
+</div>
 
 </section>
 
 
-<section id="about">
+<section class="about" id="about">
 
-<h2 class="section-title">About Me</h2>
+<img src="profile.jpg">
+
+<div class="about-text">
+
+<h2>ABOUT</h2>
 
 <p>
-I'm an aspiring DevOps engineer passionate about building scalable and automated infrastructure. 
-Currently learning AWS, Kubernetes, CI/CD pipelines, and infrastructure automation. 
-I enjoy building real-world projects that improve deployment efficiency and system reliability.
-
-My experience includes working on GitHub Actions pipelines, Docker containerization, 
-and cloud security practices across AWS and Azure.
+I’m an aspiring DevOps engineer passionate about building scalable and automated infrastructure.
+Currently learning AWS, Kubernetes, CI/CD pipelines, and infrastructure automation.
 </p>
 
-</section>
-
-
-<section id="skills">
-
-<h2 class="section-title">DevOps Skills</h2>
-
-<div class="grid skills">
-
-<div class="card">
-<i class="fa-brands fa-aws"></i>
-<h3>AWS</h3>
-<p>EC2, Cloud deployments, cloud security fundamentals</p>
-</div>
-
-<div class="card">
-<i class="fa-brands fa-docker"></i>
-<h3>Docker</h3>
-<p>Containerization and microservice packaging</p>
-</div>
-
-<div class="card">
-<i class="fa-solid fa-code-branch"></i>
-<h3>CI/CD</h3>
-<p>GitHub Actions automated pipelines</p>
-</div>
-
-<div class="card">
-<i class="fa-solid fa-server"></i>
-<h3>Linux</h3>
-<p>System administration and troubleshooting</p>
-</div>
-
-<div class="card">
-<i class="fa-solid fa-network-wired"></i>
-<h3>Networking</h3>
-<p>Security, web protocols and infrastructure basics</p>
-</div>
-
-<div class="card">
-<i class="fa-solid fa-robot"></i>
-<h3>Automation</h3>
-<p>Workflow automation and scripting</p>
-</div>
-
-</div>
-
-</section>
-
-
-<section>
-
-<h2 class="section-title">DevOps Terminal</h2>
-
-<div class="terminal">
-
-$ whoami <br>
-Preetham Pereira <br><br>
-
-$ role <br>
-Aspiring DevOps Engineer <br><br>
-
-$ skills <br>
-AWS Docker Kubernetes CI/CD Linux Terraform <br><br>
-
-$ mission <br>
-Automating infrastructure & building reliable systems 🚀
-
-</div>
-
-</section>
-
-
-<section id="projects">
-
-<h2 class="section-title">Projects</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>CI/CD Pipeline Project</h3>
 <p>
-Built an automated CI/CD pipeline using GitHub Actions to deploy applications to AWS.
+I have hands-on experience building GitHub Actions pipelines, Docker containerization, 
+and working with cloud security practices in AWS and Azure.
 </p>
+
 </div>
 
-<div class="card">
-<h3>Dockerized Application</h3>
-<p>
-Containerized a web application using Docker and deployed it in a cloud environment.
-</p>
+</section>
+
+
+<section id="resume">
+
+<div class="resume">
+
+<div>
+
+<h2>SOFTWARE SKILLS</h2>
+
+<div class="skill">
+Docker
+<div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
 </div>
 
-<div class="card">
+<div class="skill">
+AWS
+<div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
+</div>
+
+<div class="skill">
+CI/CD
+<div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+</div>
+
+<div class="skill">
+Linux
+<div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+</div>
+
+</div>
+
+<div>
+
+<h2>EXPERIENCE</h2>
+
+<p><b>Cloud Security Intern</b><br>
+CyberSapiens</p>
+
+<br>
+
+<p><b>DevOps Learning Projects</b><br>
+TrainWithShubham Community</p>
+
+<br>
+
+<p><b>Hands-on Security Labs</b><br>
+TryHackMe</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="portfolio">
+
+<h2 style="margin-bottom:40px">PROJECTS</h2>
+
+<div class="projects">
+
+<div class="project">
+<h3>CI/CD Pipeline</h3>
+<p>Built automated deployment pipeline using GitHub Actions.</p>
+</div>
+
+<div class="project">
+<h3>Dockerized App</h3>
+<p>Containerized application and deployed to cloud environment.</p>
+</div>
+
+<div class="project">
 <h3>Infrastructure as Code</h3>
-<p>
-Used Terraform concepts to provision infrastructure and automate cloud deployments.
-</p>
+<p>Provisioned infrastructure using Terraform concepts.</p>
 </div>
 
 </div>
@@ -283,36 +314,19 @@ Used Terraform concepts to provision infrastructure and automate cloud deploymen
 </section>
 
 
-<section id="contact">
+<section class="contact">
 
-<h2 class="section-title">Contact</h2>
+<h2>CONTACT</h2>
 
 <p>Email: preetham.pereira@icloud.com</p>
 
-<div class="social">
-
-<a href="https://linkedin.com/in/preetham-pereira">
-<i class="fab fa-linkedin"></i>
-</a>
-
-<a href="https://github.com">
-<i class="fab fa-github"></i>
-</a>
-
-<a href="https://twitter.com/preetham_cloud">
-<i class="fab fa-twitter"></i>
-</a>
-
-</div>
+<p>
+LinkedIn:
+<a href="https://linkedin.com/in/preetham-pereira">linkedin.com/in/preetham-pereira</a>
+</p>
 
 </section>
 
-
-<footer>
-
-<p>© 2026 Preetham Pereira | DevOps Portfolio</p>
-
-</footer>
 
 </body>
 </html>
