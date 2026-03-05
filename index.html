@@ -1,357 +1,318 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <title>Preetham Pereira | DevOps Engineer</title>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Preetham Pereira | DevOps Engineer</title>
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Fira+Code&display=swap"
-      rel="stylesheet"
-    />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <style>
-      :root {
-        --bg: #0b0f19;
-        --card: #111827;
-        --accent: #00ffd5;
-        --text: white;
-      }
+<style>
 
-      body {
-        margin: 0;
-        font-family: Poppins;
-        background: var(--bg);
-        color: var(--text);
-      }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:system-ui;
+}
 
-      /* NAV */
-      nav {
-        position: fixed;
-        width: 100%;
-        padding: 18px 8%;
-        display: flex;
-        justify-content: space-between;
-        backdrop-filter: blur(10px);
-        background: rgba(0, 0, 0, 0.4);
-        z-index: 999;
-      }
+body{
+background:#0f172a;
+color:white;
+line-height:1.6;
+}
 
-      /* HERO */
-      .hero {
-        height: 90vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-      }
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+background:#020617;
+position:sticky;
+top:0;
+z-index:100;
+}
 
-      .hero h1 {
-        font-size: 3rem;
-      }
+.logo{
+font-size:24px;
+font-weight:700;
+color:#38bdf8;
+}
 
-      .accent {
-        color: var(--accent);
-      }
+nav a{
+margin-left:25px;
+text-decoration:none;
+color:white;
+font-weight:500;
+}
 
-      .btn {
-        padding: 12px 26px;
-        border: none;
-        border-radius: 30px;
-        background: linear-gradient(45deg, #00ffd5, #007cf0);
-        cursor: pointer;
-        margin-top: 20px;
-        font-weight: 600;
-      }
+.hero{
+height:90vh;
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+text-align:center;
+}
 
-      /* SECTION */
-      section {
-        padding: 80px 8%;
-      }
+.hero h1{
+font-size:50px;
+}
 
-      .title {
-        color: var(--accent);
-        font-size: 2rem;
-        margin-bottom: 30px;
-      }
+.hero span{
+color:#38bdf8;
+}
 
-      /* DASHBOARD CARDS */
-      .dashboard {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 20px;
-      }
+.hero p{
+margin-top:10px;
+font-size:18px;
+color:#94a3b8;
+}
 
-      .card {
-        background: var(--card);
-        padding: 25px;
-        border-radius: 15px;
-      }
+.btn{
+margin-top:25px;
+padding:12px 28px;
+background:#38bdf8;
+color:black;
+border-radius:8px;
+text-decoration:none;
+font-weight:600;
+}
 
-      .metric {
-        font-size: 2rem;
-        color: var(--accent);
-      }
+section{
+padding:80px 10%;
+}
 
-      /* TERMINAL */
-      .terminal {
-        background: black;
-        padding: 20px;
-        border-radius: 12px;
-        font-family: "Fira Code";
-        color: #00ff88;
-        height: 230px;
-        overflow: auto;
-      }
+.section-title{
+font-size:32px;
+margin-bottom:40px;
+color:#38bdf8;
+}
 
-      /* CLUSTER */
-      .cluster {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-        gap: 15px;
-      }
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
 
-      .node {
-        background: var(--card);
-        padding: 18px;
-        border-radius: 12px;
-        text-align: center;
-      }
+.card{
+background:#020617;
+padding:25px;
+border-radius:12px;
+border:1px solid #1e293b;
+transition:.3s;
+}
 
-      .status {
-        margin-top: 8px;
-        font-size: 0.9rem;
-      }
+.card:hover{
+transform:translateY(-5px);
+}
 
-      .green {
-        color: #00ff88;
-      }
+.skills i{
+font-size:30px;
+margin-bottom:10px;
+color:#38bdf8;
+}
 
-      .yellow {
-        color: #ffd000;
-      }
+.terminal{
+background:black;
+padding:20px;
+border-radius:10px;
+font-family:monospace;
+color:#00ff88;
+}
 
-      /* REPOS */
-      .repo {
-        background: var(--card);
-        padding: 18px;
-        border-radius: 12px;
-        margin-bottom: 12px;
-      }
+footer{
+text-align:center;
+padding:30px;
+background:#020617;
+margin-top:50px;
+color:#94a3b8;
+}
 
-      /* HEATMAP */
-      .heatmap {
-        display: grid;
-        grid-template-columns: repeat(20, 12px);
-        gap: 5px;
-      }
+.social a{
+margin:10px;
+color:#38bdf8;
+font-size:22px;
+}
 
-      .box {
-        width: 12px;
-        height: 12px;
-        background: #1f2937;
-        border-radius: 2px;
-      }
+</style>
+</head>
 
-      .active {
-        background: #00ffd5;
-      }
+<body>
 
-      footer {
-        text-align: center;
-        padding: 40px;
-        opacity: 0.6;
-      }
-    </style>
-  </head>
+<header>
 
-  <body>
-    <nav>
-      <h3>Preetham.dev</h3>
-      <div>
-        <a
-          href="https://github.com/cloud-with-preetham"
-          target="_blank"
-          style="color: #00ffd5"
-          >GitHub</a
-        >
-      </div>
-    </nav>
+<div class="logo">Preetham</div>
 
-    <!-- HERO -->
-    <section class="hero">
-      <h1>Hi, I'm <span class="accent">Preetham Pereira</span></h1>
-      <h2 id="typing"></h2>
+<nav>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
 
-      <p>
-        Automating infrastructure • Scaling cloud systems • Enabling developer
-        velocity
-      </p>
+</header>
 
-      <button class="btn" onclick="window.open('resume.pdf')">
-        ⬇ Download Resume
-      </button>
-    </section>
 
-    <!-- DEVOPS DASHBOARD -->
-    <section>
-      <h2 class="title">DevOps Dashboard</h2>
+<section class="hero">
 
-      <div class="dashboard">
-        <div class="card">
-          <p>Deployment Success Rate</p>
-          <div class="metric">99.8%</div>
-        </div>
+<h1>Hi, I'm <span>Preetham Pereira</span></h1>
 
-        <div class="card">
-          <p>CI/CD Pipelines</p>
-          <div class="metric">42 Active</div>
-        </div>
+<p>Aspiring DevOps Engineer | AWS | Kubernetes | CI/CD</p>
 
-        <div class="card">
-          <p>Containers Running</p>
-          <div class="metric" id="containers">128</div>
-        </div>
+<a class="btn" href="#projects">View My Work</a>
 
-        <div class="card">
-          <p>System Uptime</p>
-          <div class="metric">99.99%</div>
-        </div>
-      </div>
-    </section>
+</section>
 
-    <!-- TERMINAL -->
-    <section>
-      <h2 class="title">Live Deployment Logs</h2>
-      <div class="terminal" id="terminal"></div>
-    </section>
 
-    <!-- KUBERNETES CLUSTER -->
-    <section>
-      <h2 class="title">Kubernetes Cluster</h2>
+<section id="about">
 
-      <div class="cluster">
-        <div class="node">
-          Node-1
-          <div class="status green">Healthy</div>
-        </div>
-        <div class="node">
-          Node-2
-          <div class="status green">Healthy</div>
-        </div>
-        <div class="node">
-          Node-3
-          <div class="status yellow">Scaling</div>
-        </div>
-        <div class="node">
-          Node-4
-          <div class="status green">Healthy</div>
-        </div>
-      </div>
-    </section>
+<h2 class="section-title">About Me</h2>
 
-    <!-- GITHUB PROJECTS -->
-    <section>
-      <h2 class="title">GitHub Projects</h2>
-      <div id="repos"></div>
-    </section>
+<p>
+I'm an aspiring DevOps engineer passionate about building scalable and automated infrastructure. 
+Currently learning AWS, Kubernetes, CI/CD pipelines, and infrastructure automation. 
+I enjoy building real-world projects that improve deployment efficiency and system reliability.
 
-    <!-- CONTRIBUTION HEATMAP -->
-    <section>
-      <h2 class="title">Contribution Activity</h2>
-      <div class="heatmap" id="heatmap"></div>
-    </section>
+My experience includes working on GitHub Actions pipelines, Docker containerization, 
+and cloud security practices across AWS and Azure.
+</p>
 
-    <footer>
-      © 2026 Preetham Pereira — DevOps Engineer 🚀<br />
-      reachout.preetham@gmail.com
-    </footer>
+</section>
 
-    <script>
-      /* ================= TYPING ================= */
-      const roles = [
-        "DevOps Engineer",
-        "Cloud Automation Specialist",
-        "CI/CD Pipeline Builder",
-        "Kubernetes Practitioner",
-      ];
 
-      let i = 0,
-        j = 0,
-        del = false;
-      const el = document.getElementById("typing");
+<section id="skills">
 
-      function type() {
-        let word = roles[i];
-        el.textContent = word.substring(0, j);
-        if (!del) {
-          j++;
-          if (j > word.length) {
-            del = true;
-            setTimeout(type, 1200);
-            return;
-          }
-        } else {
-          j--;
-          if (j === 0) {
-            del = false;
-            i = (i + 1) % roles.length;
-          }
-        }
-        setTimeout(type, del ? 40 : 80);
-      }
-      type();
+<h2 class="section-title">DevOps Skills</h2>
 
-      /* ================= TERMINAL ================= */
-      const logs = [
-        "> cloning repository...",
-        "> docker build successful",
-        "> pushing image to registry",
-        "> kubectl apply -f deployment.yaml",
-        "> rollout completed ✔",
-        "> production deployed 🚀",
-      ];
+<div class="grid skills">
 
-      let l = 0;
-      function terminal() {
-        if (l < logs.length) {
-          document.getElementById("terminal").innerHTML += logs[l] + "<br>";
-          l++;
-          setTimeout(terminal, 900);
-        }
-      }
-      terminal();
+<div class="card">
+<i class="fa-brands fa-aws"></i>
+<h3>AWS</h3>
+<p>EC2, Cloud deployments, cloud security fundamentals</p>
+</div>
 
-      /* ================= GITHUB FETCH ================= */
-      fetch("https://api.github.com/users/cloud-with-preetham/repos")
-        .then((r) => r.json())
-        .then((data) => {
-          const c = document.getElementById("repos");
-          data.slice(0, 6).forEach((repo) => {
-            c.innerHTML += `
-   <div class="repo">
-   <strong>${repo.name}</strong>
-   <p>${repo.description || "DevOps Project"}</p>
-   <a href="${repo.html_url}" target="_blank">View Repo</a>
-   </div>`;
-          });
-        });
+<div class="card">
+<i class="fa-brands fa-docker"></i>
+<h3>Docker</h3>
+<p>Containerization and microservice packaging</p>
+</div>
 
-      /* ================= HEATMAP ================= */
-      const heatmap = document.getElementById("heatmap");
-      for (let i = 0; i < 260; i++) {
-        const box = document.createElement("div");
-        box.className = "box";
-        if (Math.random() > 0.6) box.classList.add("active");
-        heatmap.appendChild(box);
-      }
+<div class="card">
+<i class="fa-solid fa-code-branch"></i>
+<h3>CI/CD</h3>
+<p>GitHub Actions automated pipelines</p>
+</div>
 
-      /* ================= LIVE METRIC ================= */
-      setInterval(() => {
-        document.getElementById("containers").textContent =
-          120 + Math.floor(Math.random() * 15);
-      }, 3000);
-    </script>
-  </body>
+<div class="card">
+<i class="fa-solid fa-server"></i>
+<h3>Linux</h3>
+<p>System administration and troubleshooting</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-network-wired"></i>
+<h3>Networking</h3>
+<p>Security, web protocols and infrastructure basics</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-robot"></i>
+<h3>Automation</h3>
+<p>Workflow automation and scripting</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<h2 class="section-title">DevOps Terminal</h2>
+
+<div class="terminal">
+
+$ whoami <br>
+Preetham Pereira <br><br>
+
+$ role <br>
+Aspiring DevOps Engineer <br><br>
+
+$ skills <br>
+AWS Docker Kubernetes CI/CD Linux Terraform <br><br>
+
+$ mission <br>
+Automating infrastructure & building reliable systems 🚀
+
+</div>
+
+</section>
+
+
+<section id="projects">
+
+<h2 class="section-title">Projects</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>CI/CD Pipeline Project</h3>
+<p>
+Built an automated CI/CD pipeline using GitHub Actions to deploy applications to AWS.
+</p>
+</div>
+
+<div class="card">
+<h3>Dockerized Application</h3>
+<p>
+Containerized a web application using Docker and deployed it in a cloud environment.
+</p>
+</div>
+
+<div class="card">
+<h3>Infrastructure as Code</h3>
+<p>
+Used Terraform concepts to provision infrastructure and automate cloud deployments.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section id="contact">
+
+<h2 class="section-title">Contact</h2>
+
+<p>Email: preetham.pereira@icloud.com</p>
+
+<div class="social">
+
+<a href="https://linkedin.com/in/preetham-pereira">
+<i class="fab fa-linkedin"></i>
+</a>
+
+<a href="https://github.com">
+<i class="fab fa-github"></i>
+</a>
+
+<a href="https://twitter.com/preetham_cloud">
+<i class="fab fa-twitter"></i>
+</a>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<p>© 2026 Preetham Pereira | DevOps Portfolio</p>
+
+</footer>
+
+</body>
 </html>
