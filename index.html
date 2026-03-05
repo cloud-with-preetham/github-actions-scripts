@@ -12,11 +12,13 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
 </head>
 
 <body>
 
-<div id="particles"></div>
+<div id="particles-js"></div>
 
 <nav>
 
@@ -26,6 +28,7 @@
 <li><a href="#about">About</a></li>
 <li><a href="#skills">Skills</a></li>
 <li><a href="#projects">Projects</a></li>
+<li><a href="#github">GitHub</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 
@@ -34,13 +37,29 @@
 
 <section class="hero">
 
-<img src="profile.jpg" class="profile">
+<div class="hero-left">
 
-<h1>Preetham Pereira</h1>
+<h1>Preetham<br>Pereira</h1>
 
 <h2 id="typing"></h2>
 
-<p>Aspiring DevOps Engineer building CI/CD pipelines, cloud infrastructure and automation systems.</p>
+<p>
+Aspiring DevOps Engineer building CI/CD pipelines,
+cloud infrastructure and automation systems.
+</p>
+
+<div class="buttons">
+<a href="#projects">Portfolio</a>
+<a href="#contact">Contact</a>
+</div>
+
+</div>
+
+<div class="hero-right">
+
+<img src="profile.jpg">
+
+</div>
 
 </section>
 
@@ -61,16 +80,16 @@ I enjoy building real-world infrastructure projects and sharing my DevOps journe
 
 <h2>DevOps Stack</h2>
 
-<div class="grid">
+<div class="skills-grid">
 
-<div class="card">AWS</div>
-<div class="card">Docker</div>
-<div class="card">Kubernetes</div>
-<div class="card">Terraform</div>
-<div class="card">GitHub Actions</div>
-<div class="card">Linux</div>
-<div class="card">Networking</div>
-<div class="card">Python</div>
+<div>AWS</div>
+<div>Docker</div>
+<div>Kubernetes</div>
+<div>Terraform</div>
+<div>GitHub Actions</div>
+<div>Linux</div>
+<div>Networking</div>
+<div>Python</div>
 
 </div>
 
@@ -101,13 +120,13 @@ I enjoy building real-world infrastructure projects and sharing my DevOps journe
 <div class="terminal">
 
 <p>$ whoami</p>
-<p>Preetham Pereira</p>
+<p>preetham</p>
 
 <p>$ role</p>
-<p>DevOps Engineer</p>
+<p>devops engineer</p>
 
-<p>$ skills</p>
-<p>AWS Docker Kubernetes CI/CD Terraform</p>
+<p>$ stack</p>
+<p>AWS Docker Kubernetes Terraform CI/CD</p>
 
 </div>
 
@@ -118,39 +137,33 @@ I enjoy building real-world infrastructure projects and sharing my DevOps journe
 
 <h2>Projects</h2>
 
-<div class="grid">
+<div class="projects">
 
-<div class="project">
-
+<div class="card">
 <h3>CI/CD Pipeline</h3>
-
-<p>
-Built automated deployment pipeline using GitHub Actions and Docker.
-</p>
-
+<p>Automated deployment using GitHub Actions.</p>
 </div>
 
-<div class="project">
-
-<h3>Dockerized App</h3>
-
-<p>
-Containerized a full application and deployed to cloud infrastructure.
-</p>
-
+<div class="card">
+<h3>Dockerized Application</h3>
+<p>Containerized and deployed to cloud.</p>
 </div>
 
-<div class="project">
-
-<h3>Infrastructure Automation</h3>
-
-<p>
-Used Terraform to provision infrastructure.
-</p>
-
+<div class="card">
+<h3>Terraform Infrastructure</h3>
+<p>Provisioned infrastructure as code.</p>
 </div>
 
 </div>
+
+</section>
+
+
+<section id="github">
+
+<h2>GitHub Repositories</h2>
+
+<div id="repos"></div>
 
 </section>
 
@@ -162,8 +175,10 @@ Used Terraform to provision infrastructure.
 <p>Email: reachout.preetham@gmail.com</p>
 
 <p>
-LinkedIn:
-<a href="https://linkedin.com/in/preetham-pereira">preetham-pereira</a>
+LinkedIn:  
+<a href="https://linkedin.com/in/preetham-pereira">
+linkedin.com/in/preetham-pereira
+</a>
 </p>
 
 </section>
