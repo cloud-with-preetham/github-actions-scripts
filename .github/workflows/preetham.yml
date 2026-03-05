@@ -1,8 +1,7 @@
 name: Hello Preetham
 
 on:
-  push:
-    branches: [main]
+  workflow_dispatch: 
 
 jobs:
   greet:
