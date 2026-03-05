@@ -8,305 +8,146 @@
 
 <title>Preetham Pereira | DevOps Engineer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
-body{
-background:#0a0f1c;
-color:white;
-}
-
-section{
-min-height:100vh;
-display:flex;
-align-items:center;
-padding:80px;
-}
-
-/* NAVBAR */
-
-nav{
-position:fixed;
-top:0;
-width:100%;
-display:flex;
-justify-content:space-between;
-padding:20px 80px;
-background:#0a0f1c;
-z-index:100;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-margin-left:25px;
-font-weight:500;
-}
-
-nav a:hover{
-color:#00d4ff;
-}
-
-/* HERO */
-
-.hero{
-background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8)),
-url("https://images.unsplash.com/photo-1518779578993-ec3579fee39f");
-background-size:cover;
-background-position:center;
-}
-
-.hero-content{
-max-width:600px;
-}
-
-.hero h1{
-font-size:55px;
-}
-
-.hero span{
-color:#00d4ff;
-}
-
-.hero p{
-margin-top:15px;
-color:#ccc;
-}
-
-.btn{
-margin-top:30px;
-display:inline-block;
-padding:12px 30px;
-border:1px solid white;
-border-radius:30px;
-text-decoration:none;
-color:white;
-margin-right:15px;
-}
-
-.btn:hover{
-background:#00d4ff;
-border:none;
-}
-
-/* ABOUT */
-
-.about{
-display:flex;
-gap:60px;
-}
-
-.about img{
-width:300px;
-border-radius:10px;
-}
-
-.about-text h2{
-font-size:35px;
-margin-bottom:20px;
-}
-
-.about-text p{
-color:#aaa;
-line-height:1.8;
-}
-
-/* RESUME */
-
-.resume{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:60px;
-}
-
-.skill{
-margin-bottom:20px;
-}
-
-.skill-bar{
-height:6px;
-background:#1a1f33;
-border-radius:10px;
-margin-top:6px;
-}
-
-.skill-fill{
-height:100%;
-background:#00d4ff;
-border-radius:10px;
-}
-
-/* PROJECTS */
-
-.projects{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-.project{
-background:#11162a;
-padding:25px;
-border-radius:10px;
-}
-
-.project:hover{
-transform:translateY(-5px);
-transition:.3s;
-}
-
-/* CONTACT */
-
-.contact{
-text-align:center;
-}
-
-.contact a{
-color:#00d4ff;
-text-decoration:none;
-}
-
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
+<div id="particles"></div>
 
 <nav>
 
-<div><b>Preetham</b></div>
+<div class="logo">Preetham</div>
 
-<div>
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#resume">Resume</a>
-<a href="#portfolio">Portfolio</a>
-</div>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
 
 </nav>
 
 
-<section class="hero" id="home">
+<section class="hero">
 
-<div class="hero-content">
+<img src="profile.jpg" class="profile">
 
-<h1>PREETHAM <span>PEREIRA</span></h1>
+<h1>Preetham Pereira</h1>
 
-<p>Aspiring DevOps Engineer | AWS | Kubernetes | CI/CD</p>
+<h2 id="typing"></h2>
 
-<a class="btn" href="#resume">Resume</a>
-<a class="btn" href="#portfolio">Portfolio</a>
-
-</div>
+<p>Aspiring DevOps Engineer building CI/CD pipelines, cloud infrastructure and automation systems.</p>
 
 </section>
 
 
-<section class="about" id="about">
+<section id="about">
 
-<img src="profile.jpg">
-
-<div class="about-text">
-
-<h2>ABOUT</h2>
+<h2>About Me</h2>
 
 <p>
-I’m an aspiring DevOps engineer passionate about building scalable and automated infrastructure.
-Currently learning AWS, Kubernetes, CI/CD pipelines, and infrastructure automation.
+I'm a DevOps enthusiast currently working with AWS, Docker, CI/CD and automation tools.
+I enjoy building real-world infrastructure projects and sharing my DevOps journey online.
 </p>
 
-<p>
-I have hands-on experience building GitHub Actions pipelines, Docker containerization, 
-and working with cloud security practices in AWS and Azure.
-</p>
+</section>
+
+
+<section id="skills">
+
+<h2>DevOps Stack</h2>
+
+<div class="grid">
+
+<div class="card">AWS</div>
+<div class="card">Docker</div>
+<div class="card">Kubernetes</div>
+<div class="card">Terraform</div>
+<div class="card">GitHub Actions</div>
+<div class="card">Linux</div>
+<div class="card">Networking</div>
+<div class="card">Python</div>
 
 </div>
 
 </section>
 
 
-<section id="resume">
+<section id="pipeline">
 
-<div class="resume">
+<h2>CI/CD Pipeline</h2>
 
-<div>
+<div class="pipeline">
 
-<h2>SOFTWARE SKILLS</h2>
-
-<div class="skill">
-Docker
-<div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
-</div>
-
-<div class="skill">
-AWS
-<div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
-</div>
-
-<div class="skill">
-CI/CD
-<div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
-</div>
-
-<div class="skill">
-Linux
-<div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
-</div>
-
-</div>
-
-<div>
-
-<h2>EXPERIENCE</h2>
-
-<p><b>Cloud Security Intern</b><br>
-CyberSapiens</p>
-
-<br>
-
-<p><b>DevOps Learning Projects</b><br>
-TrainWithShubham Community</p>
-
-<br>
-
-<p><b>Hands-on Security Labs</b><br>
-TryHackMe</p>
-
-</div>
+<div>Code</div>
+<div>Build</div>
+<div>Test</div>
+<div>Docker</div>
+<div>Deploy</div>
 
 </div>
 
 </section>
 
 
-<section id="portfolio">
+<section id="terminal">
 
-<h2 style="margin-bottom:40px">PROJECTS</h2>
+<h2>DevOps Terminal</h2>
 
-<div class="projects">
+<div class="terminal">
+
+<p>$ whoami</p>
+<p>Preetham Pereira</p>
+
+<p>$ role</p>
+<p>DevOps Engineer</p>
+
+<p>$ skills</p>
+<p>AWS Docker Kubernetes CI/CD Terraform</p>
+
+</div>
+
+</section>
+
+
+<section id="projects">
+
+<h2>Projects</h2>
+
+<div class="grid">
 
 <div class="project">
+
 <h3>CI/CD Pipeline</h3>
-<p>Built automated deployment pipeline using GitHub Actions.</p>
+
+<p>
+Built automated deployment pipeline using GitHub Actions and Docker.
+</p>
+
 </div>
 
 <div class="project">
+
 <h3>Dockerized App</h3>
-<p>Containerized application and deployed to cloud environment.</p>
+
+<p>
+Containerized a full application and deployed to cloud infrastructure.
+</p>
+
 </div>
 
 <div class="project">
-<h3>Infrastructure as Code</h3>
-<p>Provisioned infrastructure using Terraform concepts.</p>
+
+<h3>Infrastructure Automation</h3>
+
+<p>
+Used Terraform to provision infrastructure.
+</p>
+
 </div>
 
 </div>
@@ -314,19 +155,21 @@ TryHackMe</p>
 </section>
 
 
-<section class="contact">
+<section id="contact">
 
-<h2>CONTACT</h2>
+<h2>Contact</h2>
 
-<p>Email: preetham.pereira@icloud.com</p>
+<p>Email: reachout.preetham@gmail.com</p>
 
 <p>
 LinkedIn:
-<a href="https://linkedin.com/in/preetham-pereira">linkedin.com/in/preetham-pereira</a>
+<a href="https://linkedin.com/in/preetham-pereira">preetham-pereira</a>
 </p>
 
 </section>
 
+
+<script src="script.js"></script>
 
 </body>
 </html>
