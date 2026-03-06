@@ -4,9 +4,11 @@ on: [push]
 
 jobs:
   self-hosted-jobs:
-    runs-on: self-hosted
+    runs-on: [self-hosted, my-linux-runner]
 
     steps:
+      - name: Run on labeled runner
+        run: echo "Running on labeled self-hosted runner"
       - name: Print hostname
         run: echo "Hostname:$(hostname)"
 
