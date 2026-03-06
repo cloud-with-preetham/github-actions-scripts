@@ -1,0 +1,17 @@
+name: Check Pre-Installed Tools
+
+on: [push]
+
+jobs:
+  check-tools:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Docker version
+        run: docker --version
+      - name: Check Python version
+        run: python --version
+      - name: Check Node.js version
+        run: node --version
+      - name: Check Git version
+        run: git --version
+
