@@ -1,0 +1,30 @@
+name: Environment Variables Demo
+
+on: push
+
+env:
+  APP_NAME: myapp
+
+### Workflow to demonstrate environment variables in GitHub Actions
+## Workflow Level
+jobs:
+  env-var-job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "App Name:${{ env.APP_NAME }}"
+
+  ## Job Level
+  env-var-job-with-env:
+    runs-on: ubuntu-latest
+    env:
+      ENVIRONMENT: staging
+    steps:
+      - run: echo "Environment:${{ env.ENVIRONMENT }}"
+
+  ## Step Level
+  env-var-job-with-step-env:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Version:${{ env.VERSION }}"
+    env:
+      VERSION: 1.0.0
