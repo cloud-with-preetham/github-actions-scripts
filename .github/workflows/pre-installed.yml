@@ -1,6 +1,7 @@
 name: Check Pre-Installed Tools
 
-on: [push]
+on:
+  workflow_dispatch:
 
 jobs:
   check-tools:

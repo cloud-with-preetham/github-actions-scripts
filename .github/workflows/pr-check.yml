@@ -1,8 +1,7 @@
 name: PR Check
 
 on:
-  pull_request:
-    branches: [main]
+  workflow_dispatch:
   schedule:
     - cron: '0 0 * * *' # Runs every day at midnight
 

@@ -3,7 +3,8 @@ name: Hello Preetham
 on:
   push:
     branches: [main]
-    paths: '**.html'
+    paths:
+      - '**.html'
 
 jobs:
   greet:
