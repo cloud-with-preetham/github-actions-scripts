@@ -1,6 +1,7 @@
 name: Matrix with Exclude
 
-on: [push]
+on:
+    workflow_dispatch:
 
 jobs:
   matrix-job:
