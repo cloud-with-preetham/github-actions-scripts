@@ -6,8 +6,9 @@ env:
   APP_NAME: myapp
 
 ### Workflow to demonstrate environment variables in GitHub Actions
-## Workflow Level
+
 jobs:
+  ## Workflow Level
   env-var-job:
     runs-on: ubuntu-latest
     steps:
@@ -28,3 +29,12 @@ jobs:
       - run: echo "Version:${{ env.VERSION }}"
     env:
       VERSION: 1.0.0
+
+  ## GitHub Context Variables
+  env-var-job-with-github-context:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "Commit SHA:${{ github.sha }}"
+          echo "Actor:${{ github.actor }}"
+          echo "Ref:${{ github.ref }}"
